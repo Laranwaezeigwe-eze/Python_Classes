@@ -59,3 +59,113 @@
 # print(f'{6:>2}{frequency6:>10}')
 
 
+# for char in enumerate("Hello sir"):
+#     print(char)
+#
+# for i, char in enumerate((1,2,3)):
+#     print(i,char)
+# Enumerate is useful if u need the index of the item you are looping through.
+
+# for i, char in enumerate(list(range(100))):
+#      if(char == 60):
+#          print(f'index of 60: {i}')
+
+# i = 0
+# while i < 10:
+#     print(i)
+#     i += 1
+
+# x=7
+# print(id(x))
+#
+# values=[1,2,3]
+# print(sum(values))
+# print(values)
+#
+# import statistics
+# population = 1,3,4,2,6,5,3,4,5,2
+# print(statistics.pvariance(population))
+# sd=statistics.pstdev(population)
+# print(sd)
+# varyin=statistics.variance(population)
+# print(varyin)
+# print(statistics.stdev(population))
+# x=[1,2,3,4,5]
+# def mystery(x):
+#     y = 0
+#     for value in x:
+#         y +=value **2
+#         print(y)
+#     return  y
+# print("Mystery: ",mystery(x))
+#
+# price = [10,20,30]
+# total = 0
+# for cost in price:
+#     total= cost+total
+# print(total)
+
+# def factorial(n):
+#     if n==0:
+#         return 1
+#     if n==1:
+#         return 1
+#     else:
+#         return n * factorial(n-1)
+# print(factorial(900))
+
+# def fibonacci(n):
+#     if n == 0:
+#         return 0
+#     elif n == 1:
+#         return 1
+#     else:
+#         return fibonacci(n-1) + fibonacci(n-2)
+#
+#
+# for i in range(5):
+#     print(fibonacci(i))
+
+# _cache={}
+# def fibonacci(n):
+#     if n== 0:
+#         return 0
+#     elif n == 1:
+#         return 1
+#     if n in _cache:
+#       return _cache[n]
+#     else:
+#         result = fibonacci(n-1) + fibonacci(n-2)
+#         _cache[n] = result
+#         return  result
+#
+# for i in range(900):
+#     print(fibonacci(i))
+
+# import time
+#
+# _cache = {}
+#
+#
+# def factorial(n):
+#     if n == 1:
+#         return 1
+#     if n == 0:
+#         return 1
+#     if n in _cache:
+#         return _cache[n]
+#     else:
+#         result = n * factorial(n - 1)
+#         _cache[n] = result
+#         time.sleep(1)
+#         return result
+#
+#
+# for i in range(21, 1, -1):
+#     # time.sleep(1)
+#     print(factorial(i))
+
+character = []
+character +='Birthday'
+print(character)
+
