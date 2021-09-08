@@ -165,7 +165,156 @@
 #     # time.sleep(1)
 #     print(factorial(i))
 
-character = []
-character +='Birthday'
-print(character)
+# character = []
+# character +='Birthday'
+# print(character)
+
+# student_tuple = ('Amanda','Bintu',[2,45,6])
+# first_name, second_name, grades = student_tuple
+# print(first_name, second_name, grades)
+# print()
+# first, second ='Be'
+# print(f'{first} {second}')
+# print()
+# number1, number2, number3 = range(10, 40, 10)
+# print(f'{number1} {number2} {number3}')
+
+# SWAPPING VALUES VIA PACKING AND UNPACKING
+# number1 = 20
+# number2 = 40
+# number3 = 10
+# number4 = 5
+# number1, number2, number3, number4 = (number3, number4, number2, number1)
+# print(f'number1 ={number1}; number2 ={number2}; number3 = {number3}; number4 ={number4}')
+
+# # ACCESSING INDICES AND VALUES VIA BUILT-IN FUNCTION ENUMERATE
+# colors = ['red', 'orange', 'blue']
+# print(list(enumerate(colors)))
+# print(tuple(enumerate(colors)))
+# print()
+
+# DISPLAYING A BAR CHART
+# number = [20, 5, 7, 17, 3]
+# print(f'Index{"Value":>10}     Bar')
+# for index, value in enumerate(number):
+#     print(f'{index:>5} {value:>8}    {"*" * value}')
+# print()
+# print()
+#
+# high_low = ('Monday', 280, 62)
+# print(high_low)
+# print(f'{high_low[0]}: High={high_low[1]}, Low={high_low[2]}')
+# day, high, night = high_low
+# print(f'high_low={day}; high_low={high}; high_low{night}')
+#
+# print()
+
+# numbers = list(range(1, 16))
+# print(numbers)
+# print(numbers[1:16:2])
+# numbers[5:10]=[0,0,0,0,0]
+# print(numbers)
+# print(numbers[:5])
+# numbers[:]=[]
+# print(numbers)
+# numbers = list(range(1,16))
+# print(numbers)
+# del numbers[:4]
+# print(numbers)
+# del numbers[::2]
+# print(numbers)
+
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 94, 1, 9]
+# numbers.sort(reverse=True)
+# print(numbers)
+#
+# food = ['Cookies', 'pizza', 'Grapes', 'apple', 'steak', 'Bacon']
+# food.sort()
+# print(food)
+# veggie = ['carrot', 'brocoli', 'Grapes', 'spinach']
+# food.extend(veggie)
+# print(food)
+#
+# print()
+#
+# responses = [1, 2, 3, 4, 5, 3, 4, 2, 4, 2, 3, 1, 4]
+# for i in range(1, 6):
+#     print(f'{i} appears {responses.count(i)} times')
+# print()
+#
+# rainbow = ['green', 'orange', 'violet']
+# print(rainbow)
+# print(f'the index of violet is: {rainbow.index("violet")}')
+# rainbow.insert(2, 'red')
+# print(f'To insert: {rainbow}')
+# rainbow.append('yellow')
+# print(f'to append: {rainbow}')
+# rainbow.reverse()
+# print(f'reverse method: {rainbow}')
+# rainbow.remove('orange')
+# print(f'To remove orange element from list: {rainbow}')
+
+# STACK APPEND/PUSH AND POP- PRINCIPLE OF LIFO
+stack=[]
+stack.append('red')
+stack.append("blue")
+print(stack)
+print(stack.pop())
+print(stack.pop())
+print(stack)
+
+# LIST COMPREHENSION
+# colors= ['red','blue','orange','lilac','purple','lemon']
+# color=[item.upper() for item in colors]
+# print(colors)
+# print(color)
+
+# cubes= [(number, number ** 3) for number in range(1,6)]
+# print(cubes)
+# multiples =[number for number in range(3, 30, 3)]
+# print(multiples)
+# print()
+# number =[10,3,7,1,9,4,2]
+# cube= list(x **3 for x in number if x%2==0)
+# print(cube)
+
+# FILTERING WITH THE BUILT IN FILTER FUNCTION
+number = [10, 3, 7, 1, 9, 4, 2, 8, 5, 6]
+
+
+def is_odd(x):
+    return x % 2 != 0
+
+
+print(list(filter(is_odd, number)))
+# LAMBDA EXPRESSION OF THE ABOVE FUNCTION
+# lambda parameter_list: expression
+print(list(filter(lambda x: x % 2 != 0, number)))
+
+# USING A BUILT-IN FUNCTION MAP AND LAMBDA TO SQUARE EACH VALUE IN NUMBERS:
+print(list(map(lambda x: x ** 2, number)))
+
+# COMBINING THE FILTER, MAP AND LAMBDA OPERATION TOGETHER:
+print(list(map(lambda x: x ** 2, filter(lambda x: x % 2 != 0, number))))
+
+numbers = list(range(1, 16))
+
+
+def is_even(y):
+    return y % 2 == 0
+
+
+print(list(filter(lambda y: y % 2 == 0, numbers)))
+print(list(map(lambda y: y ** 2, numbers)))
+print(list(map(lambda y: y ** 2, filter(lambda y: y % 2 == 0, numbers))))
+
+fahrenheit = [41, 32, 212]
+celsius = list(map(lambda x: (x, (x - 32) * 5 / 9), fahrenheit))
+print(celsius)
+print(ord('o'))
+print()
+height = [69, 77, 54]
+var = [(x, x * 0.0254) for x in height]
+print(var)
+print(list(map(lambda x: (x, x * 0.0254), height)))
 
